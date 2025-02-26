@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Lion.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">untitled</a> &gt; <a href="index.source.html" class="el_package">com.example</a> &gt; <span class="el_source">Lion.java</span></div><h1>Lion.java</h1><pre class="source lang-java linenums">// Пакет, в котором находится класс Lion
+package com.example;
+
+// Импорт класса List из пакета java.util для работы с коллекциями
+import java.util.List;
+
+// Объявление класса Lion
+public class Lion {
+
+    // Объявление переменной hasMane типа boolean для хранения информации о наличии гривы у льва
+    boolean hasMane;
+
+    // Объявление переменной feline типа Feline для хранения информации о кошачьем
+    private Feline feline;
+
+    // Объявление конструктора класса Lion, который принимает параметры feline типа Feline и sex типа String
+<span class="fc" id="L17">    public Lion(Feline feline, String sex) throws Exception {</span>
+        // Инициализация переменной feline значением feline
+<span class="fc" id="L19">        this.feline = feline;</span>
+
+        // Проверка значения sex
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (&quot;Самец&quot;.equals(sex)) {</span>
+            // Если sex равен &quot;Самец&quot;, переменная hasMane устанавливается в true
+<span class="fc" id="L24">            hasMane = true;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        } else if (&quot;Самка&quot;.equals(sex)) {</span>
+            // Если sex равен &quot;Самка&quot;, переменная hasMane устанавливается в false
+<span class="fc" id="L27">            hasMane = false;</span>
+        } else {
+            // Если sex не равен ни &quot;Самец&quot;, ни &quot;Самка&quot;, метод генерирует исключение Exception
+<span class="fc" id="L30">            throw new Exception(&quot;Используйте допустимые значения пола животного - самец или самка&quot;);</span>
+        }
+<span class="fc" id="L32">    }</span>
+
+    // Объявление метода getKittens, который возвращает количество котят
+    public int getKittens() {
+        // Метод вызывает метод getKittens у объекта feline и возвращает результат
+<span class="fc" id="L37">        return feline.getKittens();</span>
+    }
+
+    // Объявление метода doesHaveMane, который возвращает информацию о наличии гривы у льва
+    public boolean doesHaveMane() {
+        // Метод возвращает значение переменной hasMane
+<span class="fc" id="L43">        return hasMane;</span>
+    }
+
+    // Объявление метода getFood, который возвращает список строк и может генерировать исключение Exception
+    public List&lt;String&gt; getFood() throws Exception {
+        // Метод вызывает метод getFood у объекта feline с параметром &quot;Хищник&quot; и возвращает результат
+<span class="fc" id="L49">        return feline.getFood(&quot;Хищник&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
