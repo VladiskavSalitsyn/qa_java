@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Cat.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">untitled</a> &gt; <a href="index.source.html" class="el_package">com.example</a> &gt; <span class="el_source">Cat.java</span></div><h1>Cat.java</h1><pre class="source lang-java linenums">// Пакет, в котором находится класс Cat
+package com.example;
+
+// Импорт класса List из пакета java.util для работы с коллекциями
+import java.util.List;
+
+// Объявление класса Cat
+public class Cat {
+
+    // Объявление переменной predator типа Predator
+    Predator predator;
+
+    // Объявление конструктора класса Cat, который принимает параметр feline типа Feline
+<span class="fc" id="L14">    public Cat(Feline feline) {</span>
+        // Инициализация переменной predator значением feline
+<span class="fc" id="L16">        this.predator = feline;</span>
+<span class="fc" id="L17">    }</span>
+
+    // Объявление метода getSound, который возвращает строку
+    public String getSound() {
+        // Метод возвращает строку, содержащую звук, издаваемый кошкой
+<span class="fc" id="L22">        return &quot;Мяу&quot;;</span>
+    }
+
+    // Объявление метода getFood, который возвращает список строк и может генерировать исключение Exception
+    public List&lt;String&gt; getFood() throws Exception {
+        // Метод вызывает метод eatMeat у объекта predator и возвращает результат
+<span class="fc" id="L28">        return predator.eatMeat();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
